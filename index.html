@@ -10,6 +10,18 @@
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 		<link rel="stylesheet" href="src/css/style.css">
+
+		<!-- TODO: 
+		 
+			- DropDown Menü -> Leistungen -> ...(Entweder eigene Seite oder als Popup)
+			- Slideshow auf die rechte Seite von HOME
+			- Linke seite von Home überarbeiten, eventuell eine schönere Animation
+			- Farbpalette überarbeiten, eventuell blau oder weniger Akzentfarben
+			- DropDownMenu Mobile zeigt nicht activen button
+			- Auflösung nicht ganz korrekt
+		
+		
+		-->
 	</head>
 
 	<body>
@@ -52,18 +64,84 @@
 			<!-- HERO -->
 			<section id="home" class="home-section">
 
-				<div class="welcome">
-					<h1>Führer Gebäudereinigung</h2>
-					<p>Wir bieten Reinigungsdienstleistungen für Privat- und Gewerbekunden an.</p>
-					<a>Du suchst nach einer </a>
+				<div class="home-left">
+					<div class="welcome">
+						<div class="trust-tags">
+							<span class="trust-tag">
+								<span class="icon-circle"><i class="fa-solid fa-star"></i></span>4.9 Bewertung
+							</span>
+
+							<span class="trust-tag">
+								<span class="icon-circle"><i class="fa-solid fa-shield-halved"></i></span>Versichert
+							</span>
+
+							<span class="trust-tag">
+								<span class="icon-circle"><i class="fa-solid fa-users"></i></span>300+ Kunden
+							</span>
+
+							<span class="trust-tag">
+								<span class="icon-circle"><i class="fa-solid fa-clock"></i></span>
+								15+ Jahre
+							</span>
+						</div>
+
+						<h1>Führer Gebäudereinigung</h1>
+
+						<p>
+							Du suchst nach einer zuverlässigen Reinigungsfirma in deiner Nähe?
+							Wir sorgen für Sauberkeit, auf die du dich verlassen kannst –
+							professionell, gründlich und termintreu.
+						</p>
+
+						<div class="usp-list">
+
+							<div class="usp-item">
+								<i class="fa-solid fa-shield-halved"></i>
+								<span>Vollständig versichert</span>
+							</div>
+
+							<div class="usp-item">
+								<i class="fa-solid fa-clock"></i>
+								<span>Termintreu und flexibel</span>
+							</div>
+
+							<div class="usp-item">
+								<i class="fa-solid fa-users"></i>
+								<span>Erfahrenes, geschultes Team</span>
+							</div>
+							
+						</div>
+					
+						<div class="btn-container">
+
+							<a href="#contact" class="btn btn-primary">
+								<i class="fa-solid fa-arrow-right"></i>
+								Beratung anfragen
+							</a>
+
+							<a href="#services" class="btn btn-secondary">
+								<i class="fa-solid fa-arrow-right"></i>
+								Unsere Leistungen
+							</a>
+
+						</div>
+					</div>
 				</div>
 
-				<div class="slide-show">
+				<div class="home-right">
+					
+					<div class="slideshow">
 
-					<div class="slide">
-						<h1>Willkommen!</h2>
-						<p>Wir bieten Reinigungsdienstleistungen für Privat- und Gewerbekunden an. </p>
+						<h1>Insights</h1>
+
+						<div class="slide">
+							<img class="image" src="src/images/slides/1.jpg">		
+							<a>Test</a>			
+						</div>
+
+
 					</div>
+
 
 				</div>
 

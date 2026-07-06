@@ -6,6 +6,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
      console.info("Website completely loaded!")
+
+     /* Slideshow */
+
+     
      
      /* Navigation */
      
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
      window.addEventListener('scroll', setActiveNav);
 
      function openMobileNavigation() {
+
           const btn = document.getElementById('navMobile');
           const drawer = document.getElementById('navDrawer');
           const drawerLinks = drawer.querySelectorAll('a');
