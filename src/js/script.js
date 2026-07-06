@@ -3,13 +3,76 @@
      Copyright: 08.06.2026
 */
 
+let showtime;
+
 document.addEventListener('DOMContentLoaded', () => {
 
      console.info("Website completely loaded!")
 
      /* Slideshow */
+     class Slideshow {
 
+          constructor(container) {
+
+               /* VARIABLES */
+               this.container = container;
+               this.images = [];
+               this.index = 0; 
+
+               /* BIND */
+               this.start();
+          }
+
+          prev() {
+
+               if (this.images.length === 0) { 
+                    return
+               };
+               
+               this.index = (this.index - 1 + this.images.length) % this.images.length;
+               this.render();
+          }
+
+          next() {
      
+               if (this.images.length === 0) { 
+                    return
+               };
+
+               this.index = (this.index + 1) % this.images.length;
+               this.render();
+          }
+
+          start() {
+               setInterval(() => this.next(), 3000);
+          }
+
+          addImage(path) {
+               this.images.push(path);
+          }
+
+          render() {
+               const imageElement = this.container.querySelector('.slide .image');
+               if (!imageElement) {
+                    return;
+               };
+               imageElement.src = this.images[this.index] || '';
+          }
+
+     }
+
+     /* Init */ 
+     const showtime = new Slideshow(document.querySelector('.slideshow'));
+     showtime.addImage("src/images/slides/1.jpg");
+     showtime.addImage("src/images/slides/2.jpg");
+     showtime.addImage("src/images/slides/3.jpg");
+     showtime.render();
+
+     /* Btn */
+     const leftBtn  = document.querySelector('.btn-left-arrow');
+     const rightBtn = document.querySelector('.btn-right-arrow');
+     leftBtn.addEventListener('click', () => showtime.prev());
+     rightBtn.addEventListener('click', () => showtime.next());
      
      /* Navigation */
      
