@@ -14,65 +14,125 @@ document.addEventListener('DOMContentLoaded', () => {
 
           constructor(container) {
 
-               /* VARIABLES */
                this.container = container;
                this.images = [];
-               this.index = 0; 
+               this.index = 0;
+               this.timer = null;
 
-               /* BIND */
                this.start();
           }
 
-          prev() {
+          prev(isManual = true) {
+               if (this.images.length === 0) {
+                    return;
+               }
 
-               if (this.images.length === 0) { 
-                    return
-               };
-               
                this.index = (this.index - 1 + this.images.length) % this.images.length;
                this.render();
+
+               if (isManual) {
+                    this.reset();
+               }
           }
 
-          next() {
-     
-               if (this.images.length === 0) { 
-                    return
-               };
+          next(isManual = false) {
+               if (this.images.length === 0) {
+                    return;
+               }
 
                this.index = (this.index + 1) % this.images.length;
                this.render();
+
+               if (isManual) {
+                    this.reset();
+               }
           }
 
           start() {
-               setInterval(() => this.next(), 3000);
+               this.timer = setInterval(() => this.next(false), 5000);
           }
 
-          addImage(path) {
-               this.images.push(path);
+          stop() {
+               clearInterval(this.timer);
+               this.timer = null;
+          }
+
+          reset() {
+               this.stop();
+               this.start();
+          }
+
+          addImage(path, text) {
+
+               const image = new Image();
+
+               if (!text || text.length === 0) {
+                    text = "undefined text";
+               }
+
+               image.onload = () => {
+                    const wasEmpty = this.images.length === 0;
+                    this.images.push({ path, text });
+
+                    if (wasEmpty) {
+                         this.render();
+                    }
+               };
+
+               image.onerror = () => {
+                    console.warn(`Bild konnte nicht geladen werden: ${path}`);
+               };
+
+               image.src = path;
+
+               console.log(this.images)
           }
 
           render() {
+
                const imageElement = this.container.querySelector('.slide .image');
                if (!imageElement) {
                     return;
+               }
+
+               const textElement = this.container.querySelector('.slide a')
+               const current = this.images[this.index]
+
+               let done = false;
+               const swap = () => {
+                    
+                    if (done) {
+                         return;
+                    }
+                    done = true;
+                    
+                    if (textElement) {
+                         textElement.textContent = current?.text || '';
+                    }
+                    imageElement.src = current?.path || '';
+                    imageElement.classList.remove('fade-out');
                };
-               imageElement.src = this.images[this.index] || '';
+
+               imageElement.classList.add('fade-out');
+               imageElement.addEventListener('transitionend', swap, { once: true });
+               setTimeout(swap, 2000);
           }
-
      }
-
+     
      /* Init */ 
+      
      const showtime = new Slideshow(document.querySelector('.slideshow'));
-     showtime.addImage("src/images/slides/1.jpg");
-     showtime.addImage("src/images/slides/2.jpg");
-     showtime.addImage("src/images/slides/3.jpg");
+     showtime.addImage("src/images/slides/1.jpg", "Baustelle");
+     showtime.addImage("src/images/slides/2.jpg", "Baum");
+     showtime.addImage("src/images/slides/3.jpg", "Betonmischer");
      showtime.render();
 
      /* Btn */
+
      const leftBtn  = document.querySelector('.btn-left-arrow');
      const rightBtn = document.querySelector('.btn-right-arrow');
-     leftBtn.addEventListener('click', () => showtime.prev());
-     rightBtn.addEventListener('click', () => showtime.next());
+     leftBtn.addEventListener('click', () => showtime.prev(true));
+     rightBtn.addEventListener('click', () => showtime.next(true));
      
      /* Navigation */
      

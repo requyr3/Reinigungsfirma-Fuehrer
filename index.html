@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description"
 			content="Professionelle Reinigungsdienstleistungen für Privat- und Gewerbekunden mit zuverlässiger Qualität.">
-		<title>Führer Gebäudereinigung</title>
+		<title>Führer Dienstleistungen</title>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 		<link rel="stylesheet" href="src/css/style.css">
@@ -14,12 +14,12 @@
 		<!-- TODO: 
 		 
 			- DropDown Menü -> Leistungen -> ...(Entweder eigene Seite oder als Popup)
-			- Slideshow auf die rechte Seite von HOME
 			- Linke seite von Home überarbeiten, eventuell eine schönere Animation
-			- Farbpalette überarbeiten, eventuell blau oder weniger Akzentfarben
+			- Farbpalette überarbeiten, RGBA und HEX in var-Definition
 			- DropDownMenu Mobile zeigt nicht activen button
 			- Auflösung nicht ganz korrekt
-		
+			- Name, Telefonnummer, Email etc. als Variable in HTML setzen (vereinfachte Änderung bei Bedarf)
+			- Slideshow Hintergrund nicht transparent, verbesserte fade Animation
 		
 		-->
 	</head>
@@ -30,7 +30,7 @@
 			<div class="nav-inner">
 				<a class="nav-logo" href="#home" aria-label="Zur Startseite">
 					<span class="logo-mark"><i class="fa-solid fa-broom"></i></span>
-					<span>Gebäudereinigung</span>
+					<span>Führer Dienstleistungen</span>
 				</a>
 
 				<ul class="nav-links">
@@ -85,7 +85,7 @@
 							</span>
 						</div>
 
-						<h1>Gebäudereinigung</h1>
+						<h1>Führer Dienstleistungen</h1>
 
 						<p>
 							Du suchst nach einer zuverlässigen Reinigungsfirma in deiner Nähe?
@@ -135,7 +135,7 @@
 						<h1>Insights</h1>
 
 						<div class="slide">
-							<img class="image" src="src/images/slides/1.jpg">		
+							<img class="image" src="...">		
 							<a>Test</a>			
 						</div>
 
@@ -166,43 +166,28 @@
 				<div class="service-grid">
 					<div class="service-card" style="--accent: #2563eb; --accent-text: #2563eb; --icon-bg: #eff6ff;">
 						<div class="service-icon"><i class="fa-solid fa-building"></i></div>
-						<span class="service-label">Reinigung</span>
-						<h3>Büroreinigung</h3>
+						<span class="service-label">Service</span>
+						<h3>Reinigung</h3>
 						<p>Saubere Arbeitsplätze für Mitarbeiter und Kunden — flexibel und zuverlässig.</p>
-						<span class="service-arrow">Mehr erfahren →</span>
+						<a class="service-arrow" href="reinigung.html" target="_blank" rel="noreferrer">Mehr erfahren →</a>
 					</div>
 
 					<div class="service-card" style="--accent: #059669; --accent-text: #059669; --icon-bg: #ecfdf5;">
 						<div class="service-icon"><i class="fa-solid fa-broom"></i></div>
-						<span class="service-label">Reinigung</span>
-						<h3>Treppenhausreinigung</h3>
+						<span class="service-label">Service</span>
+						<h3>Technik</h3>
 						<p>Regelmäßige Reinigung von Eingangsbereichen, Fluren und Treppenhäusern.</p>
-						<span class="service-arrow">Mehr erfahren →</span>
+						<a class="service-arrow" href="reinigung.html" target="_blank" rel="noreferrer">Mehr erfahren →</a>
 					</div>
 
 					<div class="service-card" style="--accent: #16a34a; --accent-text: #16a34a; --icon-bg: #f0fdf4;">
 						<div class="service-icon"><i class="fa-solid fa-tree"></i></div>
-						<span class="service-label">Außenbereich</span>
-						<h3>Gartenarbeiten</h3>
+						<span class="service-label">Service</span>
+						<h3>Objektbetreuung</h3>
 						<p>Pflege von Grünanlagen, Hecken und Außenbereichen.</p>
-						<span class="service-arrow">Mehr erfahren →</span>
+						<a class="service-arrow" href="reinigung.html" target="_blank" rel="noreferrer">Mehr erfahren →</a>
 					</div>
 
-					<div class="service-card" style="--accent: #d97706; --accent-text: #d97706; --icon-bg: #fffbeb;">
-						<div class="service-icon"><i class="fa-solid fa-truck-front"></i></div>
-						<span class="service-label">Logistik</span>
-						<h3>Transport</h3>
-						<p>Flexible Transportlösungen für Privat- und Geschäftskunden.</p>
-						<span class="service-arrow">Mehr erfahren →</span>
-					</div>
-
-					<div class="service-card" style="--accent: #7c3aed; --accent-text: #7c3aed; --icon-bg: #f5f3ff;">
-						<div class="service-icon"><i class="fa-solid fa-box"></i></div>
-						<span class="service-label">Logistik</span>
-						<h3>Logistik</h3>
-						<p>Unterstützung bei Lagerung, Verteilung und Organisation Ihrer Waren.</p>
-						<span class="service-arrow">Mehr erfahren →</span>
-					</div>
 				</div>
 			</section>
 
@@ -210,7 +195,7 @@
 			<section id="about" class="about-section">
 				<div class="about-inner">
 
-					<div class="about-visual">
+					<!-- <div class="about-visual">
 						<div class="about-stat">
 							<strong>XY</strong>
 							<span>Jahre Erfahrung in der Branche</span>
@@ -227,7 +212,7 @@
 							<strong>XY</strong>
 							<span>Durchschnittliche Bewertung</span>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="about-text">
 						<div class="section-header" style="padding:0;">
@@ -262,7 +247,8 @@
 							<div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
 							<div>
 								<span class="contact-info-label">Telefon</span>
-								<a href="tel:+49123456789" class="contact-info-value">+49 (0) 123 456 789</a>
+								<a href="tel:+49123456789" class="contact-info-value">02403 7202482</a><br>
+								<a href="tel:+4915126980433" class="contact-info-value">0151 26980433</a>
 							</div>
 						</div>
 
@@ -270,8 +256,8 @@
 							<div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
 							<div>
 								<span class="contact-info-label">E-Mail</span>
-								<a href="mailto:info@fuehrer-services.de"
-									class="contact-info-value">info@fuehrer-services.de</a>
+								<a href="mailto:info@fuehrer-dienstleistungen.de"
+									class="contact-info-value">info@fuehrer-dienstleistungen.de</a>
 							</div>
 						</div>
 
@@ -279,7 +265,7 @@
 							<div class="contact-info-icon"><i class="fa-solid fa-map-pin"></i></div>
 							<div>
 								<span class="contact-info-label">Adresse</span>
-								<span class="contact-info-value">Musterstraße 12<br>52249 Eschweiler</span>
+								<span class="contact-info-value">Nothbergerstrasse 59<br>52249 Eschweiler</span>
 							</div>
 						</div>
 
@@ -343,7 +329,7 @@
 		<footer class="footer">
 			<div class="footer-inner">
 				<div class="footer-company-text">
-					<p class="footer-brand">Führer Gebäudereinigung</p>
+					<p class="footer-brand">Führer Dienstleistungen</p>
 					<p class="footer-description">Professionelle Reinigungslösungen für Privat- und Gewerbekunden —
 						zuverlässig, gründlich, vertrauenswürdig.</p>
 				</div>
@@ -357,9 +343,10 @@
 
 				<div class="footer-section">
 					<h2 class="footer-heading">Kontakt</h2>
-					<p>Tel: +49 (0) 123 456789</p>
-					<p>E-Mail: info@fuehrer-services.de</p>
-					<p>Straße 123, 52249 Eschweiler</p>
+					<p>Tel: +49 02403 720 24 82</p>
+					<p>Mobil: +49 (0) 151 269 804 33 </p>
+					<p>E-Mail: info@fuehrer-dienstleistungen.de</p>
+					<p>Nothbergerstrasse 59, 52249 Eschweiler</p>
 				</div>
 
 				<div class="footer-section">
@@ -372,7 +359,7 @@
 		</footer>
 
 		<div class="copyright">
-			<p>&copy; 2026 Führer Gebäudereinigung – Alle Rechte vorbehalten. Developed by
+			<p>&copy; 2026 Führer Dienstleistungen – Alle Rechte vorbehalten. Developed by
 				<a href="https://github.com/requyr3" target="_blank" rel="noreferrer">Lukas Arsenovic</a>
 			</p>
 		</div>
