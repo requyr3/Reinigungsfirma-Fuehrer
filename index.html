@@ -11,16 +11,17 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 		<link rel="stylesheet" href="src/css/style.css">
 
-		<!-- TODO: 
-		 
-			- Rechte seite von Home überarbeiten, eventuell eine schönere Animation
-			- DropDownMenu Mobile zeigt nicht activen button
-			- Auflösung nicht ganz korrekt
-			- Slideshow Hintergrund nicht transparent, verbesserte fade Animation
-		
-		-->
-
 	</head>
+
+	<!-- TODO:
+
+		- Job-Card im Job-Karussell überarbeiten,
+		- "Über Uns"-Sektion Anordnung und Positionierung 
+		- "Dienstleistungen"-Sektion: Aufzählung der Leistungen
+		- Kontaktformular-DropBox an Dienstleistungen anpassen
+		- Google-Bilder raussuchen
+	
+	-->
 
 	<body>
 		<button id="scrollBtn" title=""><i class="fa-solid fa-arrow-up"></i></button>
@@ -32,12 +33,11 @@
 				</a>
 
 				<ul class="nav-links">
-					<li><a href="#home" class="active">Home</a></li>
+					<li><a href="#home">Home</a></li>
 					<li><a href="#services">Leistungen</a></li>
-					<!-- <li><a href="">Referenzen</a></li> -->
 					<li><a href="#about">Über uns</a></li>
 					<li><a href="#contact">Kontakt</a></li>
-					<!-- <li><a href="">Jobs</a></li> -->
+					<li><a href="#jobs">Jobs</a></li>
 				</ul>
 
 				<!-- Mobile Navigation -->
@@ -52,10 +52,11 @@
 		<!-- Mobile drawer menu -->
 		<div class="nav-drawer" id="navDrawer" aria-hidden="true">
 			<ul>
-				<li><a href="#home" class="active">Home</a></li>
+				<li><a href="#home">Home</a></li>
 				<li><a href="#services">Leistungen</a></li>
 				<li><a href="#about">Über uns</a></li>
 				<li><a href="#contact">Kontakt</a></li>
+				<li><a href="#jobs">Jobs</a></li>
 			</ul>
 		</div>
 
@@ -66,27 +67,8 @@
 
 				<div class="home-left">
 					<div class="welcome">
-						<div class="trust-tags">
-							<span class="trust-tag">
-								<span class="icon-circle"><i class="fa-solid fa-star"></i></span>4.9 Bewertung
-							</span>
-
-							<span class="trust-tag">
-								<span class="icon-circle"><i class="fa-solid fa-shield-halved"></i></span>Versichert
-							</span>
-
-							<span class="trust-tag">
-								<span class="icon-circle"><i class="fa-solid fa-users"></i></span>300+ Kunden
-							</span>
-
-							<span class="trust-tag">
-								<span class="icon-circle"><i class="fa-solid fa-clock"></i></span>
-								15+ Jahre
-							</span>
-						</div>
-
+		
 						<h1>Führer Dienstleistungen</h1>
-
 						<p>
 							Du suchst nach einer zuverlässigen Reinigungsfirma in deiner Nähe?
 							Wir sorgen für Sauberkeit, auf die du dich verlassen kannst –
@@ -94,36 +76,23 @@
 						</p>
 
 						<div class="usp-list">
-
 							<div class="usp-item">
 								<i class="fa-solid fa-shield-halved"></i>
 								<span>Vollständig versichert</span>
 							</div>
-
 							<div class="usp-item">
 								<i class="fa-solid fa-clock"></i>
 								<span>Termintreu und flexibel</span>
 							</div>
-
 							<div class="usp-item">
 								<i class="fa-solid fa-users"></i>
 								<span>Erfahrenes, geschultes Team</span>
 							</div>
-							
 						</div>
 					
 						<div class="btn-container">
-
-							<a href="#contact" class="btn btn-primary">
-								<i class="fa-solid fa-arrow-right"></i>
-								Beratung anfragen
-							</a>
-
-							<a href="#services" class="btn btn-secondary">
-								<i class="fa-solid fa-arrow-right"></i>
-								Unsere Leistungen
-							</a>
-
+							<a href="#contact" class="btn btn-primary">Beratung anfragen</a>
+							<a href="#services" class="btn btn-secondary">Unsere Leistungen</a>
 						</div>
 					</div>
 				</div>
@@ -133,8 +102,11 @@
 					<div class="slideshow">
 
 						<div class="slide">
-							<img class="image" src="...">		
-							<a>Test</a>			
+							<div class="slide-frame">
+								<img class="slide-image" src="" alt="">
+								<img class="slide-image" src="" alt="">
+							</div>
+							<a class="slide-caption" href="#services"></a>
 						</div>
 
 						<button class="btn-left-arrow" aria-label="Zurück">
@@ -144,9 +116,7 @@
 						<button class="btn-right-arrow" aria-label="Weiter">
 							<i class="fa-solid fa-chevron-right"></i>
 						</button>
-
 					</div>
-
 
 				</div>
 
@@ -156,10 +126,8 @@
 			<section id="services" class="service-section">
 
 				<div class="section-header">
-
 					<span class="eyebrow">Was wir anbieten</span>
 					<h2>Unsere Dienstleistungen</h2>
-
 					<p class="subline">Von der Büroreinigung bis zum Transport — wir decken jeden Bedarf professionell,
 						zuverlässig und termingerecht ab.</p>
 				</div>
@@ -170,74 +138,74 @@
 						<div class="service-icon"><i class="fa-solid fa-building"></i></div>
 						<span class="service-label">01</span>
 						<h3>Reinigung</h3>
-						<ul class="service-list">
-							<li>Büroreinigung</li>
-							<li>Baureinigung</li>
-							<li>Industriereinigung</li>
-						</ul>
+						<div class="service-tags">
+							<span class="service-tag">Büroreinigung</span>
+							<span class="service-tag">Baureinigung</span>
+							<span class="service-tag">Industriereinigung</span>
+						</div>
 					</div>
 
 					<div class="service-card" style="--accent: #059669; --accent-text: #059669; --icon-bg: #ecfdf5;">
 						<div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
 						<span class="service-label">02</span>
 						<h3>Technik</h3>
-						<ul class="service-list">
-							<li>Wartungen und Montage</li>
-							<li>Instandhaltung und Reparaturen</li>
-							<li>DGUV Vorschrift 3</li>
-							<li>Rauchmeldeanlagen</li>
-						</ul>
+						<div class="service-tags">
+							<span class="service-tag">Wartung &amp; Montage</span>
+							<span class="service-tag">Instandhaltung &amp; Reparaturen</span>
+							<span class="service-tag">DGUV Vorschrift 3</span>
+							<span class="service-tag">Rauchmeldeanlagen</span>
+						</div>
 					</div>
 
 					<div class="service-card" style="--accent: #16a34a; --accent-text: #16a34a; --icon-bg: #f0fdf4;">
 						<div class="service-icon"><i class="fa-solid fa-tree"></i></div>
 						<span class="service-label">03</span>
 						<h3>Objektbetreuung</h3>
-						<ul class="service-list">
-							<li>Gartenpflege</li>
-							<li>Hausmeisterservice</li>
-							<li>Fremdfirmenkoordination</li>
-							<li>Kundenbetreuung</li>
-						</ul>
+						<div class="service-tags">
+							<span class="service-tag">Gartenpflege</span>
+							<span class="service-tag">Hausmeisterservice</span>
+							<span class="service-tag">Fremdfirmenkoordination</span>
+							<span class="service-tag">Kundenbetreuung</span>
+						</div>
 					</div>
 
 					<div class="service-card" style="--accent: #d97706; --accent-text: #d97706; --icon-bg: #fffbeb;">
 						<div class="service-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
 						<span class="service-label">04</span>
 						<h3>Spezialreinigungen</h3>
-						<ul class="service-list">
-							<li>Fassadenreinigung</li>
-							<li>Steinreinigung</li>
-							<li>Glas- und Fensterreinigung</li>
-							<li>Reinraumreinigung</li>
-						</ul>
+						<div class="service-tags">
+							<span class="service-tag">Fassadenreinigung</span>
+							<span class="service-tag">Steinreinigung</span>
+							<span class="service-tag">Glas- &amp; Fensterreinigung</span>
+							<span class="service-tag">Reinraumreinigung</span>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- ABOUT -->
 			<section id="about" class="about-section">
-				<div class="about-inner">
-
-					<div class="about-text">
-						<div class="section-header" style="padding:0;">
-							<span class="eyebrow">Wer wir sind</span>
-							<h2>Ein Team, dem Sie vertrauen können</h2>
-							<p class="subline">Wir sind ein Familienbetrieb, das für Sauberkeit, Verlässlichkeit und 
-								Vertrauen steht! Ob Privatkunden oder Unternehmen - wir bringen frische Luft.</p>
-						</div>
-						<p class="about-body">Unser eingespieltes Team kennt jeden Handgriff. Wir arbeiten mit
-							umweltfreundlichen Mitteln, halten Termine ein und hinterlassen jeden Raum so, als wäre er
-							frisch bezogen.</p>
-						<ul class="about-list">
-							<li>Vertrauenvolles Reinigungsteam</li>
-							<li>Flexible Einsatzzeiten</li>
-							<li>Umweltfreundliche Reinigungsmittel</li>
-							<li>Feste Ansprechpartner für jeden Auftrag</li>
-						</ul>
-					</div>
-					
+				
+				<div class="section-header centered">
+					<span class="eyebrow">Wer wir sind</span>
+					<h2>Ein Team, dem Sie vertrauen können</h2>
 				</div>
+					
+				<div class="about-inner">
+					<p class="about-body">Unser eingespieltes Team kennt jeden Handgriff. Wir arbeiten mit
+						umweltfreundlichen Mitteln, halten Termine ein und hinterlassen jeden Raum so, als wäre er
+						frisch bezogen.</p>
+					<p class="about-body">Wir sind ein Familienbetrieb, das für Sauberkeit, Verlässlichkeit und
+						Vertrauen steht! Ob Privatkunden oder Unternehmen - wir bringen frische Luft.</p>
+
+					<ul class="about-list">
+						<li><i class="fa-solid fa-check"></i>Vertrauensvolles Reinigungsteam</li>
+						<li><i class="fa-solid fa-check"></i>Flexible Einsatzzeiten</li>
+						<li><i class="fa-solid fa-check"></i>Umweltfreundliche Reinigungsmittel</li>
+						<li><i class="fa-solid fa-check"></i>Feste Ansprechpartner für jeden Auftrag</li>
+					</ul>
+				</div>
+
 			</section>
 
 			<section id="contact" class="contact-section">
@@ -253,7 +221,7 @@
 							<div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
 							<div>
 								<span class="contact-info-label">Telefon</span>
-								<a href="tel:+49123456789" class="contact-info-value">+49 02403 720 24 82</a><br>
+								<a href="tel:+49024037202482" class="contact-info-value">+49 02403 720 24 82</a><br>
 								<a href="tel:+4915126980433" class="contact-info-value">+49 (0) 151 269 804 33</a>
 							</div>
 						</div>
@@ -329,6 +297,102 @@
 
 					</form>
 				</div>
+			</section>
+
+			<section id="jobs" class="jobs-section">
+
+				<div class="section-header">
+
+					<span class="eyebrow">Du suchst eine Beschäftigung?</span>
+					<h2>Jobs</h2>
+				</div>
+
+				<div class="jobs-slider">
+
+					<button class="slider-btn prev" type="button" aria-label="Vorherige Stellen">‹</button>
+
+					<div class="jobs-container">
+
+						<article class="job-card">
+							<h3>Putzkraft</h3>
+							<p>Teilzeit</p>
+							<div class="job-meta">
+								<span><i class="fa-solid fa-location-dot"></i> Eschweiler</span>
+								<span class="salary"><i class="fa-solid fa-sack-dollar"></i> 2.000 € brutto / Monat</span>
+							</div>
+							<a class="job-apply" href="mailto:info@fuehrer-dienstleistungen.de?subject=Bewerbung%20-%20Putzkraft">
+								Jetzt bewerben <i class="fa-solid fa-paper-plane"></i>
+							</a>
+						</article>
+
+						<article class="job-card">
+							<h3>Reinigungskraft</h3>
+							<p>Minijob</p>
+							<div class="job-meta">
+								<span><i class="fa-solid fa-location-dot"></i> Eschweiler</span>
+								<span class="salary"><i class="fa-solid fa-sack-dollar"></i> 13,90 € / Std.</span>
+							</div>
+							<a class="job-apply" href="mailto:info@fuehrer-dienstleistungen.de?subject=Bewerbung%20-%20Reinigungskraft">
+								Jetzt bewerben <i class="fa-solid fa-paper-plane"></i>
+							</a>
+						</article>
+
+						<article class="job-card">
+							<h3>Teamleiter Reinigung</h3>
+							<p>Vollzeit</p>
+							<div class="job-meta">
+								<span><i class="fa-solid fa-location-dot"></i> Eschweiler</span>
+								<span class="salary"><i class="fa-solid fa-sack-dollar"></i> ab 3.000 € brutto / Monat</span>
+							</div>
+							<a class="job-apply" href="mailto:info@fuehrer-dienstleistungen.de?subject=Bewerbung%20-%20Teamleiter%20Reinigung">
+								Jetzt bewerben <i class="fa-solid fa-paper-plane"></i>
+							</a>
+						</article>
+
+						<article class="job-card">
+							<h3>Hausmeister/-in</h3>
+							<p>Vollzeit</p>
+							<div class="job-meta">
+								<span><i class="fa-solid fa-location-dot"></i> Eschweiler</span>
+								<span class="salary"><i class="fa-solid fa-sack-dollar"></i> ab 2.600 € brutto / Monat</span>
+							</div>
+							<a class="job-apply" href="mailto:info@fuehrer-dienstleistungen.de?subject=Bewerbung%20-%20Hausmeister">
+								Jetzt bewerben <i class="fa-solid fa-paper-plane"></i>
+							</a>
+						</article>
+
+						<article class="job-card">
+							<h3>Gärtner/-in</h3>
+							<p>Teilzeit</p>
+							<div class="job-meta">
+								<span><i class="fa-solid fa-location-dot"></i> Eschweiler</span>
+								<span class="salary"><i class="fa-solid fa-sack-dollar"></i> 15,50 € / Std.</span>
+							</div>
+							<a class="job-apply" href="mailto:info@fuehrer-dienstleistungen.de?subject=Bewerbung%20-%20Gaertner">
+								Jetzt bewerben <i class="fa-solid fa-paper-plane"></i>
+							</a>
+						</article>
+
+						<article class="job-card">
+							<h3>Fenster- &amp; Fassadenreiniger/-in</h3>
+							<p>Minijob</p>
+							<div class="job-meta">
+								<span><i class="fa-solid fa-location-dot"></i> Eschweiler</span>
+								<span class="salary"><i class="fa-solid fa-sack-dollar"></i> 14,20 € / Std.</span>
+							</div>
+							<a class="job-apply" href="mailto:info@fuehrer-dienstleistungen.de?subject=Bewerbung%20-%20Fenster%20und%20Fassadenreiniger">
+								Jetzt bewerben <i class="fa-solid fa-paper-plane"></i>
+							</a>
+						</article>
+
+					</div>
+
+					<button class="slider-btn next" type="button" aria-label="Weitere Stellen">›</button>
+
+				</div>
+
+				<div class="jobs-pagination" aria-label="Job-Navigation"></div>
+
 			</section>
 		</main>
 
