@@ -13,19 +13,17 @@
 
 		<!-- TODO: 
 		 
-			- DropDown Menü -> Leistungen -> ...(Entweder eigene Seite oder als Popup)
-			- Linke seite von Home überarbeiten, eventuell eine schönere Animation
-			- Farbpalette überarbeiten, RGBA und HEX in var-Definition
+			- Rechte seite von Home überarbeiten, eventuell eine schönere Animation
 			- DropDownMenu Mobile zeigt nicht activen button
 			- Auflösung nicht ganz korrekt
-			- Name, Telefonnummer, Email etc. als Variable in HTML setzen (vereinfachte Änderung bei Bedarf)
 			- Slideshow Hintergrund nicht transparent, verbesserte fade Animation
 		
 		-->
+
 	</head>
 
 	<body>
-
+		<button id="scrollBtn" title=""><i class="fa-solid fa-arrow-up"></i></button>
 		<nav>
 			<div class="nav-inner">
 				<a class="nav-logo" href="#home" aria-label="Zur Startseite">
@@ -36,8 +34,10 @@
 				<ul class="nav-links">
 					<li><a href="#home" class="active">Home</a></li>
 					<li><a href="#services">Leistungen</a></li>
+					<!-- <li><a href="">Referenzen</a></li> -->
 					<li><a href="#about">Über uns</a></li>
 					<li><a href="#contact">Kontakt</a></li>
+					<!-- <li><a href="">Jobs</a></li> -->
 				</ul>
 
 				<!-- Mobile Navigation -->
@@ -132,8 +132,6 @@
 					
 					<div class="slideshow">
 
-						<h1>Insights</h1>
-
 						<div class="slide">
 							<img class="image" src="...">		
 							<a>Test</a>			
@@ -156,63 +154,70 @@
 
 			<!-- SERVICES -->
 			<section id="services" class="service-section">
+
 				<div class="section-header">
+
 					<span class="eyebrow">Was wir anbieten</span>
 					<h2>Unsere Dienstleistungen</h2>
+
 					<p class="subline">Von der Büroreinigung bis zum Transport — wir decken jeden Bedarf professionell,
 						zuverlässig und termingerecht ab.</p>
 				</div>
 
 				<div class="service-grid">
+
 					<div class="service-card" style="--accent: #2563eb; --accent-text: #2563eb; --icon-bg: #eff6ff;">
 						<div class="service-icon"><i class="fa-solid fa-building"></i></div>
-						<span class="service-label">Service</span>
+						<span class="service-label">01</span>
 						<h3>Reinigung</h3>
-						<p>Saubere Arbeitsplätze für Mitarbeiter und Kunden — flexibel und zuverlässig.</p>
-						<a class="service-arrow" href="reinigung.html" target="_blank" rel="noreferrer">Mehr erfahren →</a>
+						<ul class="service-list">
+							<li>Büroreinigung</li>
+							<li>Baureinigung</li>
+							<li>Industriereinigung</li>
+						</ul>
 					</div>
 
 					<div class="service-card" style="--accent: #059669; --accent-text: #059669; --icon-bg: #ecfdf5;">
-						<div class="service-icon"><i class="fa-solid fa-broom"></i></div>
-						<span class="service-label">Service</span>
+						<div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+						<span class="service-label">02</span>
 						<h3>Technik</h3>
-						<p>Regelmäßige Reinigung von Eingangsbereichen, Fluren und Treppenhäusern.</p>
-						<a class="service-arrow" href="reinigung.html" target="_blank" rel="noreferrer">Mehr erfahren →</a>
+						<ul class="service-list">
+							<li>Wartungen und Montage</li>
+							<li>Instandhaltung und Reparaturen</li>
+							<li>DGUV Vorschrift 3</li>
+							<li>Rauchmeldeanlagen</li>
+						</ul>
 					</div>
 
 					<div class="service-card" style="--accent: #16a34a; --accent-text: #16a34a; --icon-bg: #f0fdf4;">
 						<div class="service-icon"><i class="fa-solid fa-tree"></i></div>
-						<span class="service-label">Service</span>
+						<span class="service-label">03</span>
 						<h3>Objektbetreuung</h3>
-						<p>Pflege von Grünanlagen, Hecken und Außenbereichen.</p>
-						<a class="service-arrow" href="reinigung.html" target="_blank" rel="noreferrer">Mehr erfahren →</a>
+						<ul class="service-list">
+							<li>Gartenpflege</li>
+							<li>Hausmeisterservice</li>
+							<li>Fremdfirmenkoordination</li>
+							<li>Kundenbetreuung</li>
+						</ul>
 					</div>
 
+					<div class="service-card" style="--accent: #d97706; --accent-text: #d97706; --icon-bg: #fffbeb;">
+						<div class="service-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+						<span class="service-label">04</span>
+						<h3>Spezialreinigungen</h3>
+						<ul class="service-list">
+							<li>Fassadenreinigung</li>
+							<li>Steinreinigung</li>
+							<li>Glas- und Fensterreinigung</li>
+							<li>Reinraumreinigung</li>
+						</ul>
+					</div>
 				</div>
 			</section>
 
 			<!-- ABOUT -->
 			<section id="about" class="about-section">
 				<div class="about-inner">
-
-					<!-- <div class="about-visual">
-						<div class="about-stat">
-							<strong>XY</strong>
-							<span>Jahre Erfahrung in der Branche</span>
-						</div>
-						<div class="about-stat accent">
-							<strong>YX</strong>
-							<span>Zufriedene Kunden</span>
-						</div>
-						<div class="about-stat accent">
-							<strong>YX</strong>
-							<span>Weiterempfehlungsrate</span>
-						</div>
-						<div class="about-stat">
-							<strong>XY</strong>
-							<span>Durchschnittliche Bewertung</span>
-						</div>
-					</div> -->
 
 					<div class="about-text">
 						<div class="section-header" style="padding:0;">
@@ -231,6 +236,7 @@
 							<li>Feste Ansprechpartner für jeden Auftrag</li>
 						</ul>
 					</div>
+					
 				</div>
 			</section>
 
@@ -247,8 +253,8 @@
 							<div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
 							<div>
 								<span class="contact-info-label">Telefon</span>
-								<a href="tel:+49123456789" class="contact-info-value">02403 7202482</a><br>
-								<a href="tel:+4915126980433" class="contact-info-value">0151 26980433</a>
+								<a href="tel:+49123456789" class="contact-info-value">+49 02403 720 24 82</a><br>
+								<a href="tel:+4915126980433" class="contact-info-value">+49 (0) 151 269 804 33</a>
 							</div>
 						</div>
 
@@ -273,7 +279,7 @@
 							<div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
 							<div>
 								<span class="contact-info-label">Erreichbarkeit</span>
-								<span class="contact-info-value">Mo–Fr: 8:00 – 18:00 Uhr<br>Sa: 9:00 – 14:00 Uhr</span>
+								<span class="contact-info-value">Mo–Fr: 8:00 – 17:00 Uhr<br>Sa: 9:00 – 14:00 Uhr</span>
 							</div>
 						</div>
 
@@ -317,7 +323,7 @@
 						</div>
 
 						<div class="form-footer">
-							<p class="form-privacy">Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu.</p>
+							<p class="form-privacy">Mit dem Absenden stimmen Sie unserer <a href="dsgvo.html">Datenschutzerklärung</a> zu.</p>
 							<button type="submit" class="form-submit">Anfrage senden →</button>
 						</div>
 
@@ -328,42 +334,39 @@
 
 		<footer class="footer">
 			<div class="footer-inner">
-				<div class="footer-company-text">
+				<div class="footer-brand-col">
 					<p class="footer-brand">Führer Dienstleistungen</p>
-					<p class="footer-description">Professionelle Reinigungslösungen für Privat- und Gewerbekunden —
-						zuverlässig, gründlich, vertrauenswürdig.</p>
+					<p class="footer-description">Professionelle Reinigungslösungen für Privat- und Gewerbekunden</p>
+					<div class="footer-social-row">
+						<span class="footer-social-label">Folgen Sie uns</span>
+						<div class="footer-social-divider"></div>
+						<div class="footer-social">
+							<a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+							<a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+							<a href="https://tiktok.com" target="_blank" rel="noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+						</div>
+					</div>
 				</div>
 
-				<div class="footer-section">
-					<h2 class="footer-heading">Social Media</h2>
-					<a href="https://instagram.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-					<a href="https://facebook.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
-					<a href="https://tiktok.com" target="_blank" rel="noreferrer"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-				</div>
-
-				<div class="footer-section">
-					<h2 class="footer-heading">Kontakt</h2>
-					<p>Tel: +49 02403 720 24 82</p>
-					<p>Mobil: +49 (0) 151 269 804 33 </p>
-					<p>E-Mail: info@fuehrer-dienstleistungen.de</p>
-					<p>Nothbergerstrasse 59, 52249 Eschweiler</p>
-				</div>
-
-				<div class="footer-section">
-					<h2 class="footer-heading">Rechtliches</h2>
-					<a href="impressum.html">Impressum</a>
-					<a href="datenschutz.html">Datenschutz</a>
+				<div class="footer-contact-card">
+					<p class="footer-card-label">Direkt erreichbar</p>
+					<p><i class="fa-solid fa-phone"></i> +49 02403 720 24 82</p>
+					<p><i class="fa-solid fa-mobile-screen"></i> +49 (0) 151 269 804 33</p>
+					<p><i class="fa-solid fa-envelope"></i> info@fuehrer-dienstleistungen.de</p>
+					<p><i class="fa-solid fa-location-dot"></i> Nothbergerstrasse 59, 52249 Eschweiler</p>
 				</div>
 			</div>
-			<div class="footer-divider"></div>
-		</footer>
 
-		<div class="copyright">
-			<p>&copy; 2026 Führer Dienstleistungen – Alle Rechte vorbehalten. Developed by
-				<a href="https://github.com/requyr3" target="_blank" rel="noreferrer">Lukas Arsenovic</a>
-			</p>
-		</div>
-		
+			<div class="footer-bottom">
+				<p>&copy; 2026 Führer Dienstleistungen · Developed by
+					<a href="https://github.com/requyr3" target="_blank" rel="noreferrer">Lukas Arsenovic</a>
+				</p>
+				<div class="footer-bottom-links">
+					<a href="imprint.html">Impressum</a>
+					<a href="dsgvo.html">Datenschutz</a>
+				</div>
+			</div>
+		</footer>
 		<script src="src/js/script.js"></script>		
 	</body>
 </html>

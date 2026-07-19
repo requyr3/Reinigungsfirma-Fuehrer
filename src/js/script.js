@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                const current = this.images[this.index]
 
                let done = false;
+               
                const swap = () => {
                     
                     if (done) {
@@ -204,4 +205,22 @@ document.addEventListener('DOMContentLoaded', () => {
           });
      };
      openMobileNavigation();
+
+     /* Scroll-To-Top */ 
+     const scrollBtn = document.getElementById("scrollBtn");
+
+     window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 20) {
+               scrollBtn.style.display = "block";
+          } else {
+               scrollBtn.style.display = "none";
+          }
+     });
+
+     scrollBtn.addEventListener("click", function () {
+          window.scrollTo({
+               top: 0,
+               behavior: "smooth"
+          });
+     });
 });
